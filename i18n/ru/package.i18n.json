@@ -55,6 +55,7 @@
   "espIdf.flashBinaryToPartition.title": "Прошить двоичный файл для раздела ...",
   "espIdf.customTask.title": "Выполнить настраиваемую задачу",
   "espIdf.welcome.title": "Добро пожаловать",
+  "espIdf.projectConfigurationEditor.title": "Открыть конфигурацию проекта",
   "esp.component-manager.ui.show.title": "Показать реестр компонентов",
   "esp.component-manager.cli.addDependencyError": "Ошибка при добавлении зависимости к компоненту",
   "debug.initConfig.name": "Отладка ESP-IDF: запуск",

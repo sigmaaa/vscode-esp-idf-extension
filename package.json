@@ -1141,6 +1141,11 @@
         "command": "espIdf.welcome.start",
         "title": "%espIdf.welcome.title%",
         "category": "ESP-IDF"
+      },
+      {
+        "command": "espIdf.projectConfigurationEditor",
+        "title": "%espIdf.projectConfigurationEditor.title%",
+        "category": "ESP-IDF"
       }
     ],
     "breakpoints": [

@@ -125,6 +125,7 @@ import { getEspMatter } from "./espMatter/espMatterDownload";
 import { setIdfTarget } from "./espIdf/setTarget";
 import { PeripheralTreeView } from "./espIdf/debugAdapter/peripheralTreeView";
 import { PeripheralBaseNode } from "./espIdf/debugAdapter/nodes/base";
+import { getConfAsObj } from "./project-conf/projectConfiguration";
 
 // Global variables shared by commands
 let workspaceRoot: vscode.Uri;
@@ -853,6 +854,13 @@ export async function activate(context: vscode.ExtensionContext) {
             : "Error at defining framework path.";
         Logger.errorNotify(errMsg, error);
       }
+    });
+  });
+
+  registerIDFCommand("espIdf.projectConfigurationEditor", async () => {
+    PreCheck.perform([openFolderCheck], async () => {
+      const projectConfPath = path.join(workspaceRoot.fsPath, "esp-idf.toml");
+      const result = await getConfAsObj(projectConfPath);
     });
   });
 
